@@ -1,7 +1,149 @@
-\documentclass{article}
-\usepackage{amsfonts,amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{url}
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Force pdflatex processing even with "$ latex" (required by arXiv)
+\pdfoutput=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
+%Maldito arial 12
+%changing the deafult fonts
+\usepackage{textcomp}
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{pag}
+\renewcommand{\ttdefault}{pcr}
 
-\bibliographystyle{plain}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{array}
+%\usepackage{xcolor}
+
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{rotating}
+
+%%LaTeX spreadsheet
+\usepackage[nomessages]{fp}
+\usepackage{numprint}
+\npthousandsep{,}
+%%%%%%%%%%%%%%%%
+\usepackage{cancel}
+\usepackage[colorlinks=true]{hyperref}
+%\usepackage[square,numbers]{natbib}
+%\setcitestyle{notesep={:}}
+\usepackage[punctsep]{collref}
+\usepackage{siunitx} 
+\sisetup{group-minimum-digits=4} %compatibility with PDG
+
+\setlength{\oddsidemargin}{-0.5cm}
+\setlength{\evensidemargin}{-0.5cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{21.5cm}
+\setlength{\textwidth}{18cm}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\PreviewEnvironment{tabular}
+%%new comments enviorement
+\usepackage{comment}
+\includecomment{instrucciones}
+\specialcomment{instrucciones}
+{\begingroup\itshape }{ \medskip \endgroup}
+\excludecomment{instrucciones}
+
+\includecomment{codi}
+\specialcomment{codi}
+{\begingroup\itshape }{ \medskip \endgroup}
+\excludecomment{codi}
+
+\includecomment{colciencias}
+\specialcomment{colciencias}
+{\begingroup\itshape }{ \medskip \endgroup}
+\excludecomment{colciencias}
+
+\includecomment{evaluacioncodi}
+\specialcomment{evaluacioncodi}
+{\begingroup\itshape }{ \medskip \endgroup}
+\excludecomment{evaluacioncodi}
+
+
+\includecomment{ideas}
+\specialcomment{ideas}
+{\begingroup}{ \medskip \endgroup}
+\excludecomment{ideas}
+
+\includecomment{evaluacion}
+\specialcomment{evaluacion}
+{\begingroup}{ \medskip \endgroup}
+\excludecomment{evaluacion}
+
+\includecomment{gammalines}
+\specialcomment{gammalines}
+{\begingroup}{ \medskip \endgroup}
+\excludecomment{gammalines}
+
+
+\includecomment{brpvlhc}
+\specialcomment{brpvlhc}
+{\begingroup}{\endgroup}
+%\excludecomment{brpvlhc}
+
+\includecomment{bbrpvlhc}
+\specialcomment{bbrpvlhc}
+{\begingroup}{\endgroup}
+%\excludecomment{bbrpvlhc}
+
+\includecomment{gravitinodm}
+\specialcomment{gravitinodm}
+{\begingroup}{\endgroup}
+%\excludecomment{gravitinodm}
+
+\includecomment{darkmatter}
+\specialcomment{darkmatter}
+{\begingroup}{\endgroup}
+%\excludecomment{darkmatter}
+
+\includecomment{leptogenesis}
+\specialcomment{leptogenesis}
+{\begingroup}{\endgroup}
+%\excludecomment{leptogenesis}
+
+
+\includecomment{proyecto}
+\specialcomment{proyecto}
+{\begingroup}{\endgroup}
+%\excludecomment{proyecto}
+
+
+\includecomment{soloproyecto}
+\specialcomment{soloproyecto}
+{\begingroup}{\endgroup}
+\excludecomment{soloproyecto}
+
+\includecomment{soloficha}
+\specialcomment{soloficha}
+{\begingroup}{\endgroup}
+%\excludecomment{soloficha}
+
+
+\includecomment{evaluador}
+\specialcomment{evaluador}
+{\begingroup}{\endgroup}
+\excludecomment{evaluador}
+
+\includecomment{ingles}
+\specialcomment{ingles}
+{\begingroup}{\endgroup}
+\excludecomment{ingles}
+
+
+%%Preventing hyphenation of a particular word
+\hyphenation{SPheno}
+\hyphenation{MicroMEGAs}
+\hyphenation{SuSpect}
+\hyphenation{SOFTSUSY}
+\hyphenation{PYTHIA} 
